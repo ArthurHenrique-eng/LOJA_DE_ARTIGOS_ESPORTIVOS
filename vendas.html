@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="text-align: center;">
+        <h3> Página de Vendas </h3>
+        <h1> Cadastrar produtos </h1>
+        <h3> Bem-vindo à página de cadastro de produtos da nossa loja de artigos de esporte! </h3>
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto" name="nome do produto" required><br><br>
+        
+        <form action="/processar" method="post">
+            <label for="produtos">Categoria:</label>
+            <select id="itens" name="itens" required>
+                <option value="">-- Selecione a Categoria do Produto --</option>
+                <option value="camisa">Camisa</option>
+                <option value="short">Shorts</option>
+                <option value="calcado">Calçado</option>
+                <option value="bermuda">Bermuda</option>
+            </select>
+        </form>
+
+        <p>
+        <label for="produto">Digite o valor do produto (R$):</label>
+        <input type="text" id="valor" name="preco" required><br><br>
+        <button> Cadastrar novo produto </button>
+        </p>
+
+        <table border="1">
+            <tr>
+                <th>Produtos Cadastrados</th>
+                <th>Categoria</th>
+                <th>Preço (R$)</th>
+                <th>Modificar</th>
+            </tr>
+            <tr>
+                <td>Blusa Nike</td>
+                <td>Camisas</td>
+                <td>R$129,99</td>
+                <td><button>Editar</button> <button>Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Short Lacoste</td>
+                <td>Shorts</td>
+                <td>R$299,99</td>
+                <td><button>Editar</button> <button>Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Bermuda Addidas</td>
+                <td>Bermudas</td>
+                <td>R$99,99</td>
+                <td><button>Editar</button> <button>Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Tenis Mizuno</td>
+                <td>Calçados</td>
+                <td>R$599,99</td>
+                <td><button>Editar</button> <button>Excluir</button></td>
+            </tr>
+        </table>
+
+    </p>
+</body>
+</html>
