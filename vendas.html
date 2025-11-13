@@ -1,73 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Cadastro de produtos</title>
+    <title>Página de Cadastro de Produtos</title>
+
+    <!-- Importa o CSS externo -->
+    <link rel="stylesheet" href="vendas.css">
 </head>
 <body>
-    <p style="text-align: center;">
-        <h3> Página de Vendas </h3>
-        <h1> Cadastrar produtos </h1>
-        <h3> Bem-vindo à página de cadastro de produtos da nossa loja de artigos de esporte! </h3>
-        <label for="produto">Produto:</label>
-        <input type="text" id="produto" name="nome do produto" required><br><br>
-        
-        <form action="/processar" method="post">
-            <label for="produtos">Categoria:</label>
-            <select id="itens" name="itens" required>
-                <option value="">-- Selecione a Categoria do Produto --</option>
-                <option value="camisa">Camisa</option>
-                <option value="short">Shorts</option>
-                <option value="calcado">Calçado</option>
-                <option value="bermuda">Bermuda</option>
-            </select>
-        </form>
+    <div class="container">
+        <header>
+            <h3>Página de Vendas</h3>
+            <h1>Cadastrar Produtos</h1>
+            <h3>Bem-vindo à página de cadastro de produtos da nossa loja de artigos de esporte!</h3>
+        </header>
 
-        <p>
-        <label for="produto">Digite o valor do produto (R$):</label>
-        <input type="text" id="valor" name="preco" required><br><br>
-        <button> Cadastrar novo produto </button>
-        </p>
+        <section class="form-section">
+            <form action="/processar" method="post">
+                <div class="input-group">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" name="nome_produto" placeholder="Ex: Camisa Nike" required>
+                </div>
 
-        <table border="1">
-            <tr>
-                <th>Produtos Cadastrados</th>
-                <th>Categoria</th>
-                <th>Preço (R$)</th>
-                <th>Disponibilidade</th>
-                <th>Modificação</th>
-            </tr>
-            <tr>
-                <td>Blusa Nike</td>
-                <td>Camisas</td>
-                <td>R$129,99</td>
-                <td>--</td>
-                <td><button>Editar</button> <button>Excluir</button></td>
-            </tr>
-            <tr>
-                <td>Short Lacoste</td>
-                <td>Shorts</td>
-                <td>R$299,99</td>
-                <td>--</td>
-                <td><button>Editar</button> <button>Excluir</button></td>
-            </tr>
-            <tr>
-                <td>Bermuda Addidas</td>
-                <td>Bermudas</td>
-                <td>R$99,99</td>
-                <td>--</td>
-                <td><button>Editar</button> <button>Excluir</button></td>
-            </tr>
-            <tr>
-                <td>Tenis Mizuno</td>
-                <td>Calçados</td>
-                <td>R$599,99</td>
-                <td>--</td>
-                <td><button>Editar</button> <button>Excluir</button></td>
-            </tr>
-        </table>
+                <div class="input-group">
+                    <label for="itens">Categoria:</label>
+                    <select id="itens" name="itens" required>
+                        <option value="">-- Selecione a Categoria do Produto --</option>
+                        <option value="camisa">Camisa</option>
+                        <option value="short">Shorts</option>
+                        <option value="calcado">Calçado</option>
+                        <option value="bermuda">Bermuda</option>
+                    </select>
+                </div>
 
-    </p>
+                <div class="input-group">
+                    <label for="valor">Digite o valor do produto (R$):</label>
+                    <input type="number" id="valor" name="preco" step="0.01" min="0" placeholder="Ex: 199.99" required>
+                </div>
+
+                <button type="submit" class="btn-cadastrar">Cadastrar novo produto</button>
+            </form>
+        </section>
+
+        <section class="tabela-section">
+            <h2>Produtos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Categoria</th>
+                        <th>Preço (R$)</th>
+                        <th>Disponibilidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Blusa Nike</td>
+                        <td>Camisa</td>
+                        <td>129,99</td>
+                        <td>Em estoque</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-excluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Short Lacoste</td>
+                        <td>Shorts</td>
+                        <td>299,99</td>
+                        <td>Em estoque</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-excluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bermuda Adidas</td>
+                        <td>Bermuda</td>
+                        <td>99,99</td>
+                        <td>Em estoque</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-excluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tênis Mizuno</td>
+                        <td>Calçado</td>
+                        <td>599,99</td>
+                        <td>Em estoque</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-excluir">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>© 2025 Loja de Esportes. Todos os direitos reservados.</footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,189 @@
+/* ======== RESET E BASE ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00bcd4, #00cc88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #333;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ======== FORMULÁRIO ======== */
+.form-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #00cc88;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 204, 136, 0.3);
+}
+
+/* ======== BOTÃO PRINCIPAL ======== */
+.btn-cadastrar {
+    background-color: #00cc88;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #009966;
+    transform: scale(1.03);
+}
+
+/* ======== TABELA ======== */
+.tabela-section {
+    margin-top: 20px;
+}
+
+.tabela-section h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #00cc88;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* ======== BOTÕES DA TABELA ======== */
+.btn-editar, .btn-excluir {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.btn-editar {
+    background-color: #0066cc;
+}
+
+.btn-editar:hover {
+    background-color: #004c99;
+}
+
+.btn-excluir {
+    background-color: #ff5555;
+}
+
+.btn-excluir:hover {
+    background-color: #cc0000;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .btn-editar, .btn-excluir {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

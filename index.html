@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Loja de Artigos de Esporte</title>
+    <title>Loja de Artigos de Esporte</title>
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>
-         <h1> Bem-vindo à Nossa Loja de Artigos de Esporte! </h1>
-         <h3> Acesse o sistema da loja </h3>
-            <form action="login" method="post">
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <button><a href="vendas.html">Login site Vendas</a></button>
-                
+    <div class="container">
+        <h1>Bem-vindo à Nossa Loja de Artigos de Esporte!</h1>
+        <h3>Acesse o sistema da loja</h3>
+
+        <form action="login" method="post">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">
+                <a href="vendas.html">Login no site de Vendas</a>
+            </button>
+        </form>
+
+        <footer>© 2025 Loja de Esportes. Todos os direitos reservados.</footer>
+    </div>
 </body>
 </html>

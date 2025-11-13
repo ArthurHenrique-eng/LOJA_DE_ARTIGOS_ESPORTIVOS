@@ -1,0 +1,122 @@
+/* ======== RESET E CONFIGURAÇÕES GERAIS ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0099ff, #00cc88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== TÍTULOS ======== */
+h1 {
+    font-size: 28px;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* ======== FORMULÁRIO ======== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #00cc88;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 204, 136, 0.5);
+}
+
+/* ======== BOTÃO ======== */
+button {
+    width: 100%;
+    background-color: #00cc88;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #009966;
+    transform: scale(1.03);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
